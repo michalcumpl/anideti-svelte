@@ -1,0 +1,271 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.menu-open-link {
+  background-color: #1b2832;
+  border-color: #1b2832;
+  padding: 0.25em;
+}
+
+.menu-open-link svg {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.services-link {
+  background-color: #1b2832;
+  border-color: #1b2832;
+  padding: 0.5em;
+}
+
+.services-link svg {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.menu-open-link:hover,
+.menu-open-link:active,
+.menu-open-link:focus,
+.services-link:hover,
+.services-link:active,
+.services-link:focus {
+  background-color: #000;
+  border-color: #000;
+  box-shadow: 0 0 0 #0000;
+}
+
+.menu-close-link {
+  float: right;
+  padding: 0.5em;
+}
+
+.menu-close-link svg {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.about-link {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}
+
+.about-link svg {
+  color: #fff;
+  height: 3em;
+  width: 3em;
+}
+
+.link-icon {
+  white-space: nowrap;
+}
+
+.link-icon svg {
+  height: 1.5em;
+  width: 1.5em;
+  padding-right: 0.25em;
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.toggle {
+  margin: 5px 5px 0 0;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.support-item {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  transition: all 0.4s ease 0s;
+  width: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  background-color: var(--contrast-inverse);
+  transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 1em;
+  line-height: 2em;
+}
+
+.header {
+  background-image: url(./images/bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.headline {
+  --font-size: 4em;
+  --color: #fff;
+  --typography-spacing-vertical: 0;
+}
+
+@media only screen and (prefers-color-scheme: light) {
+  #praha6-logo {
+    filter: invert(1);
+  }
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  #harmonie-logo {
+    filter: invert(1);
+  }
+}
+
+.vertical-center {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.callout {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.callout-kids {
+  background-image: url(./images/kulisy.webp);
+}
+
+.callout-room {
+  background-image: url(./images/celek.webp);
+}
+
+.video-player {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.video-item {
+  width: 510px;
+}
+
+@media only screen and (max-width: 1199.5px) {
+  .video-item {
+    max-width: 410px;
+  }
+}
+
+@media only screen and (max-width: 991.5px) {
+  .video-item {
+    max-width: 310px;
+  }
+}
+
+@media only screen and (max-width: 767.5px) {
+  .video-item {
+    max-width: 450px;
+  }
+}
+
+.video-item p {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+
+  .header {
+    background-image: none;
+    display: block;
+    height: auto;
+    width: auto;
+    padding-bottom: 0;
+  }
+
+  .headline {
+    --font-size: 3em;
+    --color: #000;
+    --typography-spacing-vertical: 0;
+  }
+
+  .vertical-center {
+    text-align: center;
+    display: block;
+  }
+}
