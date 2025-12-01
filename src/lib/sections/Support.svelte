@@ -1,36 +1,26 @@
+<script lang="ts">
+	import { supporters } from '$lib/data/support';
+</script>
+
 <section id="support" class="container">
 	<article>
 		<h1>Podporují nás</h1>
 
-		<div class="support-item">
-			<img
-				id="harmonie-logo"
-				class="no-print"
-				loading="lazy"
-				src="/images/harmonie.webp"
-				width="78"
-				height="51"
-				alt="Církevní husitská základní umělecká škola Harmonie"
-			/>
-			<span>
-				<a href="https://www.zusharmonie.cz/" target="_blank" rel="noreferrer"
-					>Církevní husitská základní umělecká škola Harmonie</a
-				>
-			</span>
-		</div>
-		<div class="support-item">
-			<img
-				id="praha6-logo"
-				class="no-print"
-				loading="lazy"
-				src="/images/p6.webp"
-				width="78"
-				height="89"
-				alt="Městská část Praha 6"
-			/>
-			<span>
-				<a href="https://praha6.cz/" target="_blank" rel="noreferrer">Městská část Praha 6</a>
-			</span>
-		</div>
+		{#each supporters as supporter}
+			<div class="support-item">
+				<img
+					id={supporter.id}
+					class="no-print"
+					loading="lazy"
+					src={supporter.img}
+					width={supporter.width}
+					height={supporter.height}
+					alt={supporter.alt}
+				/>
+				<span>
+					<a href={supporter.href} target="_blank" rel="noreferrer">{supporter.label}</a>
+				</span>
+			</div>
+		{/each}
 	</article>
 </section>
